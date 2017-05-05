@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript">
+var student ={
+name: ["maru","raja"],
+rollno:20,
+age:17
+
+}
+document.write(student.name[1]+student.rollno+student.age);
+var m = {
+  no: 2,
+  sum: function() {
+    return this.no + 1;
+  }
+};
+
+document.write("<br>"+m.sum());
+var a=Object.create(m);
+a.no=4;
+alert(a.sum());
+</script>
+</head>
+</html>
