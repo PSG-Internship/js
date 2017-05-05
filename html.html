@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript">
+Object.size = function(obj) {
+	var size = 0;
+	for(key in obj) {
+		if(obj.hasOwnProperty(key)) size++;
+	}
+	return size;
+}
+</script>
+<body>
+<h2>This out for counting the character in a word</h2> 
+<pre>
+<script type="text/javascript">
+var str = 'hellodavidthisisatestofobjectusage';
+var letters = new Object;
+
+for(x = 0, length = str.length; x < length; x++) {
+	var l = str.charAt(x)
+	letters[l] = (isNaN(letters[l]) ? 1 : letters[l] + 1);
+}
+
+for(key in letters) {
+	document.write(key + ' :: ' + letters[key]+"\n");
+}
+document.write("total chatacter="+Object.size(letters));
+</script>
+</pre>
+</body>
+</html>
